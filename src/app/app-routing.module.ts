@@ -1,11 +1,19 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { EnterYourCodePage } from './pages/enter-your-code/enter-your-code.page';
+import { RegistrationPage } from './pages/registration/registration.page';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    component: RegistrationPage,
+  },
+  {
+    path: 'enter-your-code',
+    component: EnterYourCodePage
   }
+
+
 ];
 @NgModule({
   imports: [

@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Введите код подтверждения</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  На почту {{ email }} был выслан код подтверждения
+
+  <form [formGroup]="formGrp">
+    <ion-item>
+      <ion-label>Введите код</ion-label>
+      <ion-input type="number" formControlName="codeControl" placeholder="****"></ion-input>
+    </ion-item>
+  </form>
+</ion-content>
